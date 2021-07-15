@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="box-title">
+      <h1 class="title">SPLI<br />TTER</h1>
+    </header>
+
+    <main class="app">
+      <div class="contenido-principal">
+        <div class="content-input">
+          <label class="title-input">Bill</label>
+          <span class="errorSpan">Can't be zero</span>
+          <input id="factura" class="input" type="number" />
+          <img class="input-svg" src="./images/icon-dollar.svg" alt="" />
+        </div>
+        <div class="tips-box">
+          <label class="title-input">Select Tip %</label>
+          <button class="percentage">5%</button>
+          <button class="percentage">10%</button>
+          <button class="percentage">15%</button>
+          <button class="percentage">25%</button>
+          <button class="percentage">50%</button>
+          <input type="number" placeholder="Custom" id="custom" />
+        </div>
+        <div class="content-input">
+          <label class="title-input">Number of People</label>
+          <span class="errorSpan2">Can't be zero</span>
+          <input id="people" class="input" type="number" />
+          <img class="input-svg" src="./images/icon-person.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="total__grid">
+          <h3 class="title-input">Tip Amonut</h3>
+          <span class="total__precio">$00.00</span>
+          <p class="total__person">/ Per Person</p>
+
+          <div class="espacio"></div>
+
+          <h3 class="sub-title2">Total</h3>
+          <span class="total__precio2">$00.00</span>
+          <p class="total__person2">/ person</p>
+        </div>
+
+        <button class="btn">RESET</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
