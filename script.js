@@ -121,11 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
     factura = factura.value;
     people = people.value;
 
+    propina = (factura * selectedPercentage) / 100;
+    total2.innerHTML = "$" + propina;
     propina = (factura * selectedPercentage) / 100 / people;
     propina = Math.round(propina)
     total.innerHTML = "$" + propina;
 
-    queda = factura - propina * people;
-    total2.innerHTML = "$" + queda;
   });
 });

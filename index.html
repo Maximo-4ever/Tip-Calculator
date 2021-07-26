@@ -15,11 +15,16 @@
     />
     <!-- Css -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Animation -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
 
   <body>
     <header class="box-title">
-      <h1 class="title">SPLI<br />TTER</h1>
+      <h1 class="title animate__animated animate__bounceIn">SPLI<br />TTER</h1>
     </header>
 
     <main class="app">
@@ -27,7 +32,7 @@
         <div class="content-input">
           <label class="title-input">Bill</label>
           <span class="errorSpan">Can't be zero</span>
-          <input id="factura" class="input" type="number" />
+          <input id="factura" class="input" type="number" placeholder="0" />
           <img class="input-svg" src="./images/icon-dollar.svg" alt="" />
         </div>
         <div class="tips-box">
@@ -42,7 +47,7 @@
         <div class="content-input">
           <label class="title-input">Number of People</label>
           <span class="errorSpan2">Can't be zero</span>
-          <input id="people" class="input" type="number" />
+          <input id="people" class="input" type="number" placeholder="0" />
           <img class="input-svg" src="./images/icon-person.svg" alt="" />
         </div>
       </div>
