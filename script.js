@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var tipsBox = document.querySelector(".tips-box");
   const percentage = document.querySelectorAll(".percentage");
   var selectedPercentage = undefined;
-  const total = document.querySelector(".total__precio");
-  const total2 = document.querySelector(".total__precio2");
+  var total = document.querySelector(".total__precio");
+  var total2 = document.querySelector(".total__precio2");
   var btn = document.querySelector(".btn");
 
   //Quitar Error de input
@@ -19,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
       people.classList.remove("errorPeople");
       people.placeholder = "";
     });
-    
-
   });
-  
+
   //Quitar Porcentaje
   removerActive = () => {
     if (frasco == undefined) {
@@ -96,36 +94,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     errorSpan2.style.display = "none";
 
-
-
-
-
     // Imprimir propina y total
+    factura2 = factura.value;
+    factura2 = parseInt(factura2)
+    percentage2 = frasco.textContent;
+
     if (custom.value != "") {
       custom.addEventListener("click", () => {
-        frasco.classList.remove("active")
-      })
-    factura = factura.value;
-    people = people.value;
-
-    propina = (factura * custom.value) / 100 / people;
-    propina = Math.round(propina)
-    total.innerHTML = "$" + propina;
-
-    queda = factura - propina * people;
-    total2.innerHTML = "$" + queda;
-    
-    return;
+        frasco.classList.remove("active");
+      });
+      percentage2 = frasco.value;
+      percentage2 = parseInt(percentage2)
+      people = people.value;
+      tipAmount = factura2 * percentage2 / 100;
+      numeroTotal = (tipAmount / people).toFixed(2)
+      total.textContent = `$${tipAmount / people}.00`;
+      numeroTotal2 = (tipAmount / people * people).toFixed(2)
+      total2.textContent = `$${tipAmount + tipAmount / people}.00`;
+      return;
     }
 
-    factura = factura.value;
+    percentage2 = parseInt(percentage2)
     people = people.value;
-
-    propina = (factura * selectedPercentage) / 100;
-    total2.innerHTML = "$" + propina;
-    propina = (factura * selectedPercentage) / 100 / people;
-    propina = Math.round(propina)
-    total.innerHTML = "$" + propina;
-
+    tipAmount = factura2 * percentage2 / 100;
+    numeroTotal = (tipAmount / people).toFixed(2)
+    total.textContent = `$${numeroTotal}`;
+    numeroTotal2 = (tipAmount / people * people).toFixed(2)
+    total2.textContent = `$${numeroTotal2}`;
   });
 });
