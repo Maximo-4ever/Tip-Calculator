@@ -20,6 +20,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel='shortcut icon' type='image/x-icon' href='/images/favicon-32x32.png' />
   </head>
 
   <body>
@@ -31,9 +32,9 @@
       <div class="contenido-principal">
         <div class="content-input">
           <label class="title-input">Bill</label>
-          <span class="errorSpan">Can't be zero</span>
-          <input id="factura" class="input" type="number" placeholder="0" />
-          <img class="input-svg" src="./images/icon-dollar.svg" alt="" />
+          <span class="error-Zero">Can't be zero</span>
+          <input id="factura" class="input" type="number" placeholder="0.00" />
+          <img class="input-svg" src="./images/icon-dollar.svg" alt="dollar svg" />
         </div>
         <div class="tips-box">
           <label class="title-input">Select Tip %</label>
@@ -42,13 +43,13 @@
           <button class="percentage">15%</button>
           <button class="percentage">25%</button>
           <button class="percentage">50%</button>
-          <input type="number" placeholder="Custom" id="custom" />
+          <input id="custom" class="input percentage" type="number" placeholder="Custom" maxlength="3" />
         </div>
         <div class="content-input">
           <label class="title-input">Number of People</label>
-          <span class="errorSpan2">Can't be zero</span>
+          <span class="error-Zero">Can't be zero</span>
           <input id="people" class="input" type="number" placeholder="0" />
-          <img class="input-svg" src="./images/icon-person.svg" alt="" />
+          <img class="input-svg" src="./images/icon-person.svg" alt="person svg" />
         </div>
       </div>
 
@@ -56,13 +57,13 @@
         <div class="total__grid">
           <h3 class="title-input">Tip Amonut</h3>
           <span class="total__precio">$00.00</span>
-          <p class="total__person">/ Person</p>
+          <p class="total__person">/ Per Person</p>
 
           <div class="espacio"></div>
 
           <h3 class="sub-title2">Total</h3>
           <span class="total__precio2">$00.00</span>
-          <p class="total__person2">/ Person</p>
+          <p class="total__person2">/ Per Person</p>
         </div>
 
         <button class="btn">Enter</button>
