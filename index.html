@@ -33,7 +33,13 @@
         <div class="content-input">
           <label class="title-input">Bill</label>
           <span class="error-Zero">Can't be zero</span>
-          <input id="factura" class="input" type="number" placeholder="0.00" />
+          <input
+            id="factura"
+            class="input"
+            type="number"
+            placeholder="0.00"
+            min="0"
+          />
           <img
             class="input-svg"
             src="./images/icon-dollar.svg"
@@ -52,13 +58,20 @@
             class="input percentage"
             type="number"
             placeholder="Custom"
-            maxlength="3"
+            min="0"
+            max="100"
           />
         </div>
         <div class="content-input">
           <label class="title-input">Number of People</label>
           <span class="error-Zero">Can't be zero</span>
-          <input id="people" class="input" type="number" placeholder="0" />
+          <input
+            id="people"
+            class="input"
+            type="number"
+            placeholder="0"
+            min="0"
+          />
           <img
             class="input-svg"
             src="./images/icon-person.svg"
