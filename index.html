@@ -27,7 +27,7 @@
     <h1 class="title animate__animated animate__bounceIn">SPLI<br />TTER</h1>
 
     <main class="app">
-      <div class="contenido-principal">
+      <div class="main">
         <div class="content-input">
           <label class="title-input">Bill</label>
           <span class="error-Zero">Can't be zero</span>
@@ -35,7 +35,7 @@
             id="factura"
             class="input"
             type="number"
-            placeholder="0.00"
+            placeholder="0"
             min="0"
           />
           <img
@@ -44,16 +44,16 @@
             alt="dollar svg"
           />
         </div>
-        <div class="tips-box">
+        <div class="selectTip">
           <label class="title-input">Select Tip %</label>
-          <button class="percentage">5%</button>
-          <button class="percentage">10%</button>
-          <button class="percentage">15%</button>
-          <button class="percentage">25%</button>
-          <button class="percentage">50%</button>
+          <button class="selectTip__percentage">5%</button>
+          <button class="selectTip__percentage">10%</button>
+          <button class="selectTip__percentage active">15%</button>
+          <button class="selectTip__percentage">25%</button>
+          <button class="selectTip__percentage">50%</button>
           <input
             id="custom"
-            class="input percentage"
+            class="selectTip__percentage input"
             type="number"
             placeholder="Custom"
             min="0"
@@ -62,13 +62,13 @@
         </div>
         <div class="content-input">
           <label class="title-input">Number of People</label>
-          <span class="error-Zero">Can't be zero</span>
           <input
             id="people"
             class="input"
             type="number"
             placeholder="0"
-            min="0"
+            min="1"
+            value="1"
           />
           <img
             class="input-svg"
@@ -82,16 +82,16 @@
         <div class="total__grid">
           <h3 class="title-input">Tip Amonut</h3>
           <span class="total__precio">$00.00</span>
-          <p class="total__person">/ Per Person</p>
+          <p class="total__person">/ person</p>
 
           <div class="espacio"></div>
 
           <h3 class="sub-title2">Total</h3>
           <span class="total__precio2">$00.00</span>
-          <p class="total__person">/ Per Person</p>
+          <p class="total__person">/ person</p>
         </div>
 
-        <button class="btn">Enter</button>
+        <button class="total__btn">Reset</button>
       </div>
     </main>
 
