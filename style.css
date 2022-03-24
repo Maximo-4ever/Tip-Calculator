@@ -11,7 +11,6 @@
   --App-verder-oscuro: rgb(0, 71, 75);
   --App-celeste: rgb(39, 195, 176);
   --App-focus: rgb(159, 232, 221);
-  --Weights: 400, 500, 700;
 }
 body {
   font-size: 19px;
@@ -62,9 +61,9 @@ body {
 }
 .input-svg {
   position: absolute;
-  top: 60px;
+  top: 57px;
   left: 20px;
-  height: 23px;
+  height: 22px;
 }
 .selectTip {
   display: grid;
@@ -130,6 +129,8 @@ body {
   white-space: nowrap;
   display: grid;
   grid-template-areas: "titulo numero" "parrafo numero" "espacio espacio" "titulo2 numero2" "parrafo2 numero2";
+  justify-content: space-between;
+  column-gap: 15px;
   margin-bottom: 60px;
 }
 .total .title-input {
@@ -146,11 +147,7 @@ body {
   grid-area: parrafo2;
 }
 .total__precio {
-  color: var(--App-celeste);
-  font-weight: 700;
   grid-area: numero;
-  font-size: 40px;
-  text-align: end;
 }
 .espacio {
   height: 45px;
@@ -165,11 +162,25 @@ body {
   height: 100%;
 }
 .total__precio2 {
-  color: var(--App-celeste);
-  font-weight: 700;
   grid-area: numero2;
+}
+.total__precio,
+.total__precio2 {
+  max-width: 270px;
   font-size: 40px;
   text-align: end;
+  font-weight: 700;
+  color: var(--App-celeste);
+  overflow-x: auto;
+}
+.total__precio::-webkit-scrollbar,
+.total__precio2::-webkit-scrollbar {
+  height: 6px;
+}
+.total__precio::-webkit-scrollbar-thumb:horizontal,
+.total__precio2::-webkit-scrollbar-thumb:horizontal {
+  background: #8e90999a;
+  border-radius: 5px;
 }
 .total__btn {
   font-family: "Space Mono", monospace;
@@ -222,6 +233,17 @@ body {
 @media (max-width: 510px) {
   .app {
     padding: 23px;
+  }
+  .input {
+    font-size: 1.35em;
+  }
+  .selectTip__percentage {
+    font-size: 25px;
+  }
+  .input-svg {
+    top: 51px;
+    left: 18px;
+    height: 20px;
   }
   .total {
     padding: 25px;
